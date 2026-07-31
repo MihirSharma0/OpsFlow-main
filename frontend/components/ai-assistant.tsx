@@ -96,45 +96,43 @@ export function AiAssistant({ showInsights = true }: { showInsights?: boolean })
         </div>
       )}
 
-      <MessageScrollerProvider>
-        <MessageScroller className="flex-1">
-          <MessageScrollerViewport>
-            <MessageScrollerContent className="p-4">
-              {messages.map((message) => (
-                <MessageScrollerItem key={message.id}>
-                  <Message align={message.role === 'user' ? 'end' : 'start'}>
-                    <MessageContent>
-                      <Bubble
-                        variant={message.role === 'user' ? 'default' : 'secondary'}
-                        align={message.role === 'user' ? 'end' : 'start'}
-                      >
-                        <BubbleContent>{message.content}</BubbleContent>
-                      </Bubble>
-                    </MessageContent>
-                  </Message>
-                </MessageScrollerItem>
-              ))}
-              {isThinking && (
-                <MessageScrollerItem>
-                  <Message align="start">
-                    <MessageContent>
-                      <Bubble variant="secondary" align="start">
-                        <BubbleContent>
-                          <span className="flex items-center gap-2 text-muted-foreground">
-                            <Spinner className="size-3.5" />
-                            Analyzing your data…
-                          </span>
-                        </BubbleContent>
-                      </Bubble>
-                    </MessageContent>
-                  </Message>
-                </MessageScrollerItem>
-              )}
-            </MessageScrollerContent>
-          </MessageScrollerViewport>
-          <MessageScrollerButton />
-        </MessageScroller>
-      </MessageScrollerProvider>
+      <MessageScroller className="flex-1">
+        <MessageScrollerViewport>
+          <MessageScrollerContent className="p-4">
+            {messages.map((message) => (
+              <MessageScrollerItem key={message.id}>
+                <Message align={message.role === 'user' ? 'end' : 'start'}>
+                  <MessageContent>
+                    <Bubble
+                      variant={message.role === 'user' ? 'default' : 'secondary'}
+                      align={message.role === 'user' ? 'end' : 'start'}
+                    >
+                      <BubbleContent>{message.content}</BubbleContent>
+                    </Bubble>
+                  </MessageContent>
+                </Message>
+              </MessageScrollerItem>
+            ))}
+            {isThinking && (
+              <MessageScrollerItem>
+                <Message align="start">
+                  <MessageContent>
+                    <Bubble variant="secondary" align="start">
+                      <BubbleContent>
+                        <span className="flex items-center gap-2 text-muted-foreground">
+                          <Spinner className="size-3.5" />
+                          Analyzing your data…
+                        </span>
+                      </BubbleContent>
+                    </Bubble>
+                  </MessageContent>
+                </Message>
+              </MessageScrollerItem>
+            )}
+          </MessageScrollerContent>
+        </MessageScrollerViewport>
+        <MessageScrollerButton />
+      </MessageScroller>
 
       <div className="flex flex-col gap-3 border-t border-border p-4">
         <div className="flex flex-wrap gap-1.5">
