@@ -205,6 +205,11 @@ async def unhandled_exception_handler(request, exc):
 # Routes
 # --------------------------------------------------------------------------
 
+@app.get("/")
+async def root():
+    return {"message": "OpsFlow API is running", "docs": "/docs"}
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok", "model": GEMMA_MODEL, "gemini_configured": bool(GEMINI_API_KEY)}
