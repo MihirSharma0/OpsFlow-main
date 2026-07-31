@@ -111,7 +111,7 @@ export function AppSidebar() {
             <AvatarFallback className="bg-primary/15 text-xs text-primary">AR</AvatarFallback>
           </Avatar>
           <div className="flex min-w-0 flex-col">
-            <span className="truncate text-xs font-medium">Alex Rivera</span>
+            <span className="truncate text-xs font-medium">Estinno</span>
             <span className="truncate text-xs text-muted-foreground">Rivera Trading Co.</span>
           </div>
         </div>

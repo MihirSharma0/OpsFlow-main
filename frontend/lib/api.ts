@@ -4,7 +4,7 @@
 
 import type { InvoiceResult } from './mock-data'
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/$/, '')
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://opsflow-main.onrender.com').replace(/\/$/, '')
 
 export class ApiError extends Error {}
 

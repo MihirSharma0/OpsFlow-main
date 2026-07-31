@@ -32,7 +32,7 @@ const initialMessages: ChatMessage[] = [
     id: 'welcome',
     role: 'assistant',
     content:
-      "Hi Alex! I'm your OpsFlow assistant. I can analyze your cashflow, track overdue invoices, suggest reorders, and surface business insights. What would you like to know?",
+      "Hi Estinno! I'm your OpsFlow assistant. I can analyze your cashflow, track overdue invoices, suggest reorders, and surface business insights. What would you like to know?",
   },
 ]
 
