@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: 'Chat with your AI business assistant for insights and actions.',
 }
 
-export const dynamic = 'force-dynamic'
 
 export default function AssistantPage() {
   return (
